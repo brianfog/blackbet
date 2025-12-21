@@ -1,0 +1,15 @@
+body {
+  background: rgb(231, 231, 231);
+  margin: 0;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: vazir;
+  src: url(Fonts/Vazir-Bold.ttf);
+}
+
+@font-face{
+  font-family: milk;
+  src: url(Fonts/Milker.otf);
+}
