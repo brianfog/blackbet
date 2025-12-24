@@ -5,7 +5,7 @@ export default function BSlider(){
     return (
         <div className='Wholesilde'>
             <div className="slide">
-                {Array.from({length : 3},(_, i) => (<div className="sitem">
+                {Array.from({length : 3},(_, i) => (<div className="sitem" key={i}>
                     <div className='itemimage'>
                         <img src="" alt="" />
                     </div>
