@@ -40,6 +40,7 @@ header {
 .Menu {
     display: flex;
     height: 100%;
+    min-width: 381px;
     width: 26%;
     margin-right: 40px;
     justify-content: space-between;
@@ -61,7 +62,7 @@ header {
 }
 
 .Menu a:hover {
-    background: linear-gradient(120deg, rgb(34, 34, 34)45% , rgb(85, 85, 85) 60% , rgb(34,34,34) 75%);
+    background: linear-gradient(120deg, rgb(34, 34, 34)45%, rgb(85, 85, 85) 60%, rgb(34, 34, 34) 75%);
     background-size: 200%;
     background-position: 200%;
     animation: SHine infinite linear 2s;
@@ -70,11 +71,27 @@ header {
 
 
 @keyframes SHine {
-    from{
+    from {
         background-position: -200%;
-    }to{
+    }
+
+    to {
         background-position: 200%;
     }
 }
 
+@media screen and (max-width : 730px) {
+    header {
+        height: 200px;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Menu {
+        margin: 0;
+        min-width: 0;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
 
