@@ -48,6 +48,8 @@ header {
 }
 
 .Menu a {
+    font-family: arial;
+    font-weight: 600;
     color: white;
     font-size: 18px;
     display: flex;
