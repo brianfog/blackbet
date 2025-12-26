@@ -100,6 +100,7 @@
     overflow: hidden;
     animation: OPen ease 1s;
     display: flex;
+    word-break: break-word;
     align-items: end;
     position: relative;
 }
