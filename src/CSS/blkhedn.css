@@ -215,6 +215,7 @@
     }
 
 
+
 }
 
 @media screen and (max-width:450px) {
@@ -226,5 +227,18 @@
         margin-left: 0;
         margin-bottom: -10px;
         transform: scale(0.8);
+    }
+
+    .welcome{
+        width: 465px;
+        animation: opess ease 1s;
+    }
+}
+
+@keyframes opess {
+    from {
+        width: 0px;
+    } to {
+        width: 465px;
     }
 }
