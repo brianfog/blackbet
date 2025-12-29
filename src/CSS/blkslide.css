@@ -162,18 +162,21 @@
 
 @media screen and (max-width: 586px) {
 
+    .sitem {
+        flex-direction: column;
+        height: 600px;
+    }
+
     .itemimage {
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        right: 0;
-        top: 0;
-        border-radius: 0 10px 0 10px;
+        background: black;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
     }
 
     .Details h1 {
         left: 20px;
-        top: 10px;
+        top: 15px;
     }
 
     .Author {
