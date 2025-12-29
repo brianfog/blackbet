@@ -1,0 +1,19 @@
+
+
+
+[
+    {
+        "header": "The Best Gaming PC"
+        ,"Image": "src/Images/CORSAIR-FRAME-4000D-LCD-RS-ARGB-01.jpg"
+    }
+    ,
+    {
+        "header":"Your Dream PC Set"
+        ,"Image":"src/Images/CORSAIR-Nuka-Cola-Headset-01.jpg"
+    }
+    ,
+    {
+        "header":"Finally a Great Headphone"
+        ,"Image":"src/Images/Bose-QuietComfort-gen-2-04.jpg"
+    }
+]

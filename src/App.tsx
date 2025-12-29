@@ -11,6 +11,7 @@ function App() {
     <>
       <Blkheader/>
       <Bheadown/>
+  
       <BSlider/>
       <Bfooter/>
     </>

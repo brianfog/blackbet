@@ -1,17 +1,18 @@
-import '../CSS/blkslide.css'
+import '../CSS/blkslide.css';
+import manijs from "../json/main.json";
 
 export default function BSlider(){
 
     return (
         <div className='Wholesilde'>
             <div className="slide">
-                {Array.from({length : 3},(_, i) => (<div className="sitem" key={i}>
+                {manijs.map( item => (<div className="sitem">
                     <div className='itemimage'>
-                        <img src="" alt="" />
+                        <img src={item.Image} alt="" />
                     </div>
                     <div className='Details'>
                          <h1>
-                            Header
+                            {item.header}
                          </h1>
                          <div className='detail-par'>
                             <p>
