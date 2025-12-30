@@ -29,6 +29,7 @@
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    padding-top: 20px;
 }
 
 .planbuy {
