@@ -84,4 +84,7 @@
         grid-template-rows: repeat(4,1fr);
         row-gap: 70px;
     }
+    .planitem{
+        height: 500px;
+    }
 }
