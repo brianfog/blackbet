@@ -20,7 +20,7 @@ export default function Blkheader() {
                         Shop
                     </a>
                     <a>
-                        Tel
+                        Blog
                     </a>
                     <a>
                         Contact
