@@ -1,0 +1,38 @@
+[
+    {
+        "plan":"2 Weeks",
+        "price": "4$",
+        "advantages":[
+            "5% Off Every Headphone",
+            "400MB Of our cloudy Service",
+            "Ultimate VPN Service 10% Off"
+        ]
+    },
+    {
+        "plan":"1 Month",
+        "price": "12$",
+        "advantages":[
+            "20% Off Every Laptop",
+            "2GB Of our cloudy Service",
+            "Ultimate VPN Service"
+        ]
+    },
+    {
+        "plan":"3 Months",
+        "price": "20$",
+        "advantages":[
+            "25% Off Every RAM",
+            "4GB Of our cloudy Service",
+            "Ultimate VPN Service Free"
+        ]
+    },
+    {
+        "plan":"1 Year",
+        "price": "27$",
+        "advantages":[
+            "50% Off Every GPU",
+            "10GB Of our cloudy Service",
+            "Ultimate VPN Service Free"
+        ]
+    }
+]
