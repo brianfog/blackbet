@@ -17,9 +17,12 @@ export default function Blan() {
                                 </button>
                             </div>
                             <div className="advantage">
-                                {plan.advantages.map(adv => (<h1>
-                                    {adv}
-                                </h1>))}
+                                <h1>Pros:</h1>
+                                <ul>
+                                    {plan.advantages.map(adv => (<li>
+                                        {adv}
+                                    </li>))}
+                                </ul>
                             </div>
                         </div>))
                     }

@@ -1,109 +1,131 @@
-.plan-sec {
+.plan-sec{
     height: max-content;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 200px 0 200px 0;
+    align-items: center;
+    margin: 150px 0 100px 0;
 }
 
-.plan-con {
+.plan-con{
+    width: 80%;
     height: max-content;
-    width: 90%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 120px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
     justify-items: center;
-
+    gap: 100px;
 }
 
-.planitem {
-    height: 600px;
-    width: 90%;
+.planitem{
     display: flex;
-    box-shadow: 0 1px 10px rgb(132, 132, 132);
+    height: 230px;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 1px 10px rgb(181, 181, 181);
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.planbuy{ 
+    flex-shrink: 0;
+    display: flex;
+    width: 170px;
+    height: 100%;
     flex-direction: column;
+    position: relative;
+    background: black;
+    color: white;
+    font-family: arial;
     align-items: center;
     justify-content: space-evenly;
-    position: relative;
-    padding-top: 20px;
 }
 
-.planbuy {
-    height: 30%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-}
 
-.planitem button {
-    position: absolute;
-    bottom: -60px;
-    height: 50px;
-    width: 40%;
+.planbuy button {
+    height: 40px;
+    width: 80%;
+    border: 2px solid white;
     background: black;
-    border: none;
     color: white;
-    font-family: Arial;
     font-size: 20px;
-    border-radius: 2px;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .advantage {
-    height: 40%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px gray;
-    border-style: solid none none none;
-    padding-top: 60px;
-    margin-bottom: 35px;
+    align-items: start;
+    justify-content: center;
+    margin-left: 10px;
+    font-family: arial;
+}
+
+.advantage ul {
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 50px 0 0 70px ;
 }
 
 .advantage h1 {
-    position: relative;
-    font-size: 20px;
-    top: 0;
-    left: 0;
+    position: absolute;
+    left: 30px;
+    top: 5px;
 }
 
-@media screen and (max-width: 902px) {
-    .advantage h1 {
-        position: relative;
-        font-size: 16px;
-        top: 0;
-        left: 0;
+@media screen and (max-width: 1380px) {
+    .plan-con{
+        width: 90%;
+    }
+    .advantage {
+        margin-left: 0;
+    }
+    .advantage ul {
+        padding: 50px 0 0 70px;
     }
 }
 
-@media screen and (max-width: 688px) {
-    .plan-sec {
-        margin: 100px 0 100px 0;
-    }
-
-    .plan-con {
-        grid-template-columns: 100%;
+@media screen and (max-width: 1220px) {
+    .plan-con{
+        grid-template-columns: 500px;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
         grid-template-rows: repeat(4, 1fr);
-        row-gap: 70px;
     }
 
     .planitem {
-        height: 500px;
+        transform: scale(1.2);
     }
+}
 
-    .advantage h1 {
-        position: relative;
-        font-size: 16px;
-        top: 0;
-        left: 0;
+@media screen and (max-width: 680px) {
+    .plan-sec{
+        margin: 100px 0 100px 0;
+    }
+    .plan-con{
+        gap: 20px;
+    }
+    .planitem{
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .plan-sec{
+        margin: 50px 0 50px 0;
+    }
+    .plan-con{
+        gap: 0;
+    }
+    .planitem{
+        
+        transform: scale(0.7);
     }
 }
