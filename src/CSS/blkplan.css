@@ -8,7 +8,7 @@
 }
 
 .plan-con {
-    height:max-content;
+    height: max-content;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -16,10 +16,10 @@
     column-gap: 60px;
     row-gap: 120px;
     justify-items: center;
-    
+
 }
 
-.planitem{
+.planitem {
     height: 600px;
     width: 90%;
     display: flex;
@@ -56,7 +56,7 @@
     cursor: pointer;
 }
 
-.advantage{
+.advantage {
     height: 40%;
     width: 80%;
     display: flex;
@@ -71,21 +71,39 @@
 
 .advantage h1 {
     position: relative;
-    font-size: 16px;
+    font-size: 20px;
     top: 0;
     left: 0;
 }
 
+@media screen and (max-width: 902px) {
+    .advantage h1 {
+        position: relative;
+        font-size: 16px;
+        top: 0;
+        left: 0;
+    }
+}
+
 @media screen and (max-width: 688px) {
-    .plan-sec{
+    .plan-sec {
         margin: 100px 0 100px 0;
     }
-    .plan-con{
+
+    .plan-con {
         grid-template-columns: 100%;
-        grid-template-rows: repeat(4,1fr);
+        grid-template-rows: repeat(4, 1fr);
         row-gap: 70px;
     }
-    .planitem{
+
+    .planitem {
         height: 500px;
+    }
+
+    .advantage h1 {
+        position: relative;
+        font-size: 16px;
+        top: 0;
+        left: 0;
     }
 }
