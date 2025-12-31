@@ -107,10 +107,10 @@
 
 @media screen and (max-width: 680px) {
     .plan-sec{
-        margin: 100px 0 100px 0;
+        margin: 70px 0 100px 0;
     }
     .plan-con{
-        gap: 20px;
+        gap: 80px;
         grid-template-columns: 100%;
 
     }
