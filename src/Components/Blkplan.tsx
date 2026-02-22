@@ -6,6 +6,9 @@ export default function Blan() {
     return (
         <>
             <div className="plan-sec">
+                <h1 className="plans-head">
+                    Plans
+                </h1>
                 <div className="plan-con">
                     {
                         plans.map(plan => (<div className="planitem">
