@@ -9,6 +9,19 @@ header {
     align-items: center;
     border: 1px white;
     border-style: none none solid none;
+    animation: glitter infinite 2s ease;
+}
+
+@keyframes glitter{
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 4px 20px rgb(122, 122, 122);
+    }
+    95%{
+        box-shadow: none;
+    }
 
 }
 
