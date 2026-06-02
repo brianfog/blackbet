@@ -22,7 +22,7 @@ export default function Blkshopp() {
 
     const Hardware_switch_Rot = useRef([]);
 
-    const Hardware_Open = (index) => {
+    const Hardware_Open = (index : number) => {
 
         set_open(open_index === index ? null : index);
 
