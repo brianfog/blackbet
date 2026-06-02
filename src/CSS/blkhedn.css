@@ -1,29 +1,56 @@
-.headown {
-    height: 480px;
-    padding-top: 80px;
+.Introduction-section {
+    padding-top: 200px;
     width: 100%;
-    background: black;
+    height: max-content;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: space-evenly;
+    padding-bottom: 120px;
+    background: black;
 }
 
-.signin {
-    height: 300px;
-    width: 40%;
-    border: 1px white;
-    border-style: none solid none none;
+.Log-In {
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 30%;
+    background: black;
+    aspect-ratio: 3/4;
     align-items: center;
     justify-content: space-evenly;
-    position: relative;
+    border-radius: 9px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 10px rgb(122, 122, 122), -1px -1px 10px rgb(122, 122, 122);
+    animation: glitter infinite ease-in-out 2s;
 }
 
-.inputsign {
-    height: 110px;
-    width: 70%;
+
+@keyframes glitter{
+    0%{
+        box-shadow: 1px 1px 10px rgb(122, 122, 122), -1px -1px 10px rgb(122, 122, 122);
+    }
+    49%{
+        box-shadow: 5.5px 5.5px 10px rgb(122, 122, 122), -5.5px -5.5px 10px rgb(122, 122, 122);
+    }
+    99%{
+        box-shadow: 1px 1px 10px rgb(122, 122, 122),-1px -1px 10px rgb(122, 122, 122);
+    }
+
+}
+
+
+.Log-In label {
+    color: white;
+    font-family: arial;
+    font-size: 2.6vw;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.sign-input-box {
+    width: 80%;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,215 +58,207 @@
     position: relative;
 }
 
-.inputsign input {
-    height: 40px;
+.inputs {
     width: 100%;
-    border-radius: 0;
-    padding-left: 10px;
-
+    aspect-ratio: 7/1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.inputsign input:focus {
+.inputs input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    font-family: arial;
+    font-size: 1.2vw;
+}
+
+.inputs input:focus{
     outline: none;
 }
 
-.signin button {
-    width: 72%;
-    height: 60px;
-    border: 2px solid white;
-    background: black;
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
+.inputs input::placeholder {
+    font-size: 1.1vw;
 }
 
-.noaccount {
-    color: white;
+
+.inputs button {
+    height: 85%;
+    aspect-ratio: 1;
     position: absolute;
-    bottom: -10px;
+    right: 6px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-.noaccount a {
-    text-decoration: underline;
+.inputs button:hover {
+    background: rgba(128, 128, 128, 0.479);
+}
+
+.Sign-Submit-Sec {
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.Sign-Submit-Sec p {
+    color: white;
+    font-size: 1vw;
+    font-family: arial;
+    margin-top: 17px;
+}
+
+.Sign-Submit-Sec a:hover {
+    color: blue;
     cursor: pointer;
 }
 
-.noaccount a:hover {
-    color: blue;
+.Sign-submit {
+    width: 100%;
+    aspect-ratio: 7/1;
+    border-radius: 3px;
+    background: black;
+    border: 2px solid white;
+    color: white;
+    font-family: arial;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    animation: SHine infinite linear 2s;
 }
 
-.hednright {
-    width: 50%;
-    height: 300px;
+.Sign-submit:hover{
+    background: rgb(239, 239, 239);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255),-2px -2px 10px rgb(255, 255, 255);
+    color: black;
+    border: none;
+    transition: 0.2s ease;
+}
+
+.Sign-submit:active {
+    transform: scale(0.97);
+}
+
+.sub-header-right{
+    width: 40%;
+    height: max-content;
+    position: relative;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text{
+    color: whitesmoke;
+    font-size: 8vw;
+    border: 1px solid white;
+    margin-bottom: 2%;
+    border-style: none none solid none;
+}
+
+
+.truck-animation{
+    width: 100%;
+    aspect-ratio: 7/1;
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: center;
     justify-content: start;
-    position: relative;
-    margin-left: 10%;
 }
 
-.weltext {
-    font-family: Arial;
-    color: white;
-    top: 0;
-    font-size: 100px;
-    position: absolute;
+.truck-animation img{
+
+    height: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 2%;
+
 }
 
-.welcomebox {
-    position: relative;
-    height: 100px;
-    width: max-content;
+.truck-line{
+    width: 90%;
+    height: 100%;
     display: flex;
-}
-
-.welcome {
-    min-height: 100px;
-    height: max-content;
-    width: 477px;
-    color: white;
+    align-items: center;
+    justify-content: start;
     overflow: hidden;
-    animation: OPen ease 1s;
-    display: flex;
-    word-break: break-word;
-    align-items: end;
+    animation: truck_anime linear 1s;
     position: relative;
 }
 
-
-
-.welcome h1 {
-    font-family: Arial;
-    position: relative;
-    font-size: 36px;
+.truck-line h1{
+    font-size: 2.2vw ;
+    min-width: 500px;
     color: white;
-    width: 477px;
-    animation: pos ease 2s;
+    padding-left: 10%;
 }
 
+@keyframes truck_anime {
 
-.welcome img {
-    position: absolute;
-    right: 0;
-   
-}
-
-@keyframes OPen {
-    from {
-        width: 100px;
-    }
-
-    to {
-        width: 477px;
-    }
-}
-
-@keyframes OPhone {
-    from {
+    from{
         width: 0%;
-    }
-
-    to {
-        width: 80%;
-    }
-}
-
-
-@keyframes pos {
-    from {
-        position: absolute;
-    }
-
-    to {
-        position: absolute;
-    }
-}
-
-@media screen and (max-width : 1190px){
-    .hednright{
-        margin-left: 20px;
-        justify-content: center;
-    }
-    .welcomebox{
-        margin-left: 50px;
-        transform: scale(0.9);
-    }
-}
-
-@media screen and (max-width : 960px) {
-    
-    .hednright{
-        transform: scale(0.8);
-    }
-
-}
-
-@media screen and (max-width: 780px) {
-
-    .headown {
-        flex-direction: column;
-        padding-top: 100px;
-        justify-content: space-evenly;
-    }
-
-    .signin {
-        border-style: none none solid none;
-        height: 340px;
-        padding-bottom: 20px;
+    }to{
         width: 100%;
-        transform: scale(0.9);
     }
-
-    .inputsign {
-        margin-bottom: 40px;
-    }
-
-    .noaccount {
-        bottom: 86px;
-    }
-
-    .hednright {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        flex-direction: row;
-        align-items: end;
-        justify-content: center;
-        position: relative;
-        margin: 0;
-        transform: scale(0.7);
-    }
-
-    .weltext {
-        top: -60px;
-    }
-
-
 
 }
 
-@media screen and (max-width:450px) {
-    .headown {
-        padding-top: 20px;
-    }  
+@media screen and (max-width: 730px) {
+    .Introduction-section{
+        flex-direction: column-reverse;
+        padding: 30px 0 100px 0;
+        justify-content: space-between;
 
-    .welcomebox{
-        margin-left: 0;
-        margin-bottom: -10px;
-        transform: scale(0.8);
     }
 
-    .welcome{
-        width: 465px;
-        animation: opess ease 1s;
+    .Log-In {
+        width:70%;
     }
-}
 
-@keyframes opess {
-    from {
-        width: 0px;
-    } to {
-        width: 465px;
+    .Log-In label {
+        font-size: 7vw;
+    }
+
+    .inputs input {
+        font-size: 3.5vw;
+    }
+
+    .inputs input::placeholder{
+        font-size: 3vw;
+    }
+
+    .Sign-Submit-Sec p{
+        font-size: 2.5vw;
+    }
+
+    .Sign-submit{
+        font-size: 3vw;
+    }
+
+    .sub-header-right{
+        width: 70%;
+        margin-bottom: 70px;
+    }
+
+    .welcome-text{
+        font-size: 13vw;
+    }
+
+    .truck-animation{
+        aspect-ratio: 6/1;
+    }
+
+    .truck-line h1{
+        font-size: 4vw;
+        padding-left: 5%;
     }
 }

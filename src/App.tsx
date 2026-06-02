@@ -3,7 +3,8 @@ import Blkheader from "./Components/blkHead";
 import Bheadown from "./Components/blkhedown";
 import Blan from "./Components/Blkplan";
 import Blkshopp from "./Components/BLKshop";
-import BSlider from "./Components/blkSlider";
+import BuildyourPc from "./Components/BuildPC";
+import Exp_Slide from "./Components/ExpandingSlide";
 
 
 
@@ -13,8 +14,9 @@ function App() {
     <>
       <Blkheader/>
       <Bheadown/>
+      <Exp_Slide/>
       <Blkshopp/>
-      <BSlider/>
+      <BuildyourPc/>
       <Blan/>
       <Bfooter/>
     </>

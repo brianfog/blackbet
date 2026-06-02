@@ -1,0 +1,186 @@
+.PC_Lab {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0 10% 0;
+}
+
+.PC_Builder {
+    width: 90%;
+    aspect-ratio: 2.3;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgb(156, 156, 156);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.PC_video {
+    height: 100%;
+    aspect-ratio: 1;
+    background: rgb(58, 58, 58);
+}
+
+.Hardware_Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Hardware_Sec_Header {
+    width: 100%;
+    height: 15%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: arial;
+    font-size: 0.8vw;
+    position: relative;
+}
+
+
+.Hardware_Inventory {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 85%;
+    position: relative;
+}
+
+.Hardware_btn {
+    height: 100%;
+    aspect-ratio: 1/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: -1px 0 10px gray;
+}
+
+.Hardware_btn button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 80%;
+    font-size: 1vw;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 1px 10px gray;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.Hardware_btn button:hover {
+
+    color: black;
+    background: white;
+    transition: 0.1s ease;
+}
+
+.Hardware_Find{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.Hardware_Find_Input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    box-shadow: 0 1px 10px gray;
+    margin-bottom: 1%;
+}
+
+.Hardware_Find input{
+    padding-left: 1%;
+    width: 80%;
+    height: 70%;
+}
+
+.Hardware_Find input:focus{
+    outline: none;
+}
+
+.Hardware_List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:scroll ;
+    position: relative;
+    width: 100%;
+    scrollbar-width: thin;
+    font-family: arial;
+}
+
+.Hardware_List button{
+    position: relative;
+    width: 98%;
+    margin-top: 1%;
+    aspect-ratio: 6/1;
+}
+
+
+@media screen and (max-width : 800px) {
+ 
+.PC_Builder{
+    width: 90%;
+    aspect-ratio: 1/2.3;
+    flex-direction: column-reverse;
+}
+
+.PC_video{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+.Hardware_btn {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 10;
+    flex-direction: row;
+}
+
+.Hardware_btn button {
+    width: 15%;
+    height: 80%;
+    font-size: 1.6vw;
+}
+
+.Hardware_Inventory{
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.hardware_find{
+    height: auto;
+    aspect-ratio: 4/4;
+}
+
+
+}

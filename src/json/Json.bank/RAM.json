@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "capacity": "8GB",
+    "type": "DDR4",
+    "price": 35.99,
+    "model": "Corsair"
+  },
+  {
+    "id": 2,
+    "capacity": "16GB",
+    "type": "DDR4",
+    "price": 62.50,
+    "model": "Kingston"
+  },
+  {
+    "id": 3,
+    "capacity": "32GB",
+    "type": "DDR5",
+    "price": 119.99,
+    "model": "G.Skill"
+  },
+  {
+    "id": 4,
+    "capacity": "64GB",
+    "type": "DDR4",
+    "price": 229.00,
+    "model": "Crucial"
+  },
+  {
+    "id": 5,
+    "capacity": "4GB",
+    "type": "DDR4",
+    "price": 22.99,
+    "model": "TeamGroup"
+  },
+  {
+    "id": 6,
+    "capacity": "16GB",
+    "type": "DDR5",
+    "price": 59.99,
+    "model": "Corsair"
+  },
+  {
+    "id": 7,
+    "capacity": "32GB",
+    "type": "DDR5",
+    "price": 134.99,
+    "model": "Samsung"
+  },
+  {
+    "id": 8,
+    "capacity": "8GB",
+    "type": "DDR4",
+    "price": 31.49,
+    "model": "Patriot"
+  },
+  {
+    "id": 9,
+    "capacity": "64GB",
+    "type": "DDR5",
+    "price": 249.99,
+    "model": "Kingston"
+  },
+  {
+    "id": 10,
+    "capacity": "128GB",
+    "type": "DDR5",
+    "price": 489.00,
+    "model": "Corsair"
+  }
+]

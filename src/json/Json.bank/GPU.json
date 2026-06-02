@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "model": "RTX 4090",
+    "vram_capacity": "24GB",
+    "price": 1599.99,
+    "provider": "NVIDIA"
+  },
+  {
+    "id": 2,
+    "model": "RX 7900 XTX",
+    "vram_capacity": "24GB",
+    "price": 949.99,
+    "provider": "AMD"
+  },
+  {
+    "id": 3,
+    "model": "RTX 4080 Super",
+    "vram_capacity": "16GB",
+    "price": 999.99,
+    "provider": "NVIDIA"
+  },
+  {
+    "id": 4,
+    "model": "RX 7800 XT",
+    "vram_capacity": "16GB",
+    "price": 499.99,
+    "provider": "AMD"
+  },
+  {
+    "id": 5,
+    "model": "RTX 4070 Ti Super",
+    "vram_capacity": "16GB",
+    "price": 799.99,
+    "provider": "NVIDIA"
+  },
+  {
+    "id": 6,
+    "model": "RTX 4060",
+    "vram_capacity": "8GB",
+    "price": 299.99,
+    "provider": "NVIDIA"
+  },
+  {
+    "id": 7,
+    "model": "RX 7700 XT",
+    "vram_capacity": "12GB",
+    "price": 419.99,
+    "provider": "AMD"
+  },
+  {
+    "id": 8,
+    "model": "RTX 3060",
+    "vram_capacity": "12GB",
+    "price": 279.99,
+    "provider": "NVIDIA"
+  },
+  {
+    "id": 9,
+    "model": "RX 7600 XT",
+    "vram_capacity": "16GB",
+    "price": 329.99,
+    "provider": "AMD"
+  },
+  {
+    "id": 10,
+    "model": "RTX 3050",
+    "vram_capacity": "8GB",
+    "price": 199.99,
+    "provider": "NVIDIA"
+  }
+]

@@ -1,17 +1,18 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../CSS/blkhedn.css";
 import truck from "../Images/icons8-truck-100(1).png";
 
-export default function Bheadown(){
+export default function Bheadown() {
+
 
     const [email, set_emial] = useState("");
 
     const [pass, set_pass] = useState("");
 
+    const [TheType, Set_Type] = useState(`password`);
+
     const see = useRef(null);
 
-    const eye_ref = useRef(null);
- 
     let seetype = true;
 
 
@@ -19,40 +20,56 @@ export default function Bheadown(){
     const seepass = () => {
         seetype = !seetype;
 
-        if(!seetype){
-            eye_ref.current.type = `text`;
+        if (!seetype) {
+            Set_Type(`text`);
             see.current.innerText = `-`;
-        }else{
-            eye_ref.current.type = `password`;
+        } else {
+            Set_Type(`password`);
             see.current.innerText = `x`;
         }
 
     };
 
-    return(
-        <div className="headown">
-            <div className="signin">
 
-                <div className="inputsign">
-                    <input type="email" onChange={(e) => { set_emial(e.target.value) }} placeholder="Your Email..."/>
-                    <input type="password" ref={eye_ref} onChange={(e)=> {set_pass(e.target.value)}} placeholder="Your Password..."/>
-                    <button onClick={seepass} ref={see}>x</button>
+
+
+
+
+    return (
+        <div className="Introduction-section">
+            <div className="Log-In">
+
+                <label>Log In</label>
+
+                <div className="sign-input-box">
+
+                    <div className="inputs">
+                        <input type="email" onChange={(e) => { set_emial(e.target.value) }} placeholder="Your Email..." maxLength={25} />
+                    </div>
+
+                    <div className="inputs">
+                        <input type={TheType} onChange={(e) => { set_pass(e.target.value) }} placeholder="Your Password..." maxLength={15} />
+                        <button onClick={seepass} ref={see}>x</button>
+                    </div>
+
                 </div>
 
-                <button type="submit">Sign In</button>
-                <p className="noaccount">Don't have an account ? <a>Sign Up</a></p>
+                <div className="Sign-Submit-Sec">
+                    <button className="Sign-submit" type="submit" >Try</button>
+                    <p>You don't have an account?  <a>Sign-Up</a></p>
+                </div>
 
             </div>
 
-            <div className="hednright">
+            <div className="sub-header-right">
 
-                <h1 className="weltext">Welcome</h1>
+                <h1 className="welcome-text">Welcome</h1>
 
-                <div className="welcomebox">
-                    <div className="welcome">
-                        <h1>To BlackBerry Official Site</h1>
+                <div className="truck-animation">
+                    <div className="truck-line">
+                        <h1>To BlackBerry Official Site  </h1>
                     </div>
-                    <img src={truck}/>
+                    <img src={truck} />
                 </div>
 
             </div>

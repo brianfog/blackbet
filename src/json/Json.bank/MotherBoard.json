@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "model": "B760M Aorus Elite",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR5",
+    "price": 159.99,
+    "provider": "Gigabyte"
+  },
+  {
+    "id": 2,
+    "model": "MPG B550 Gaming Plus",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR4",
+    "price": 149.99,
+    "provider": "MSI"
+  },
+  {
+    "id": 3,
+    "model": "ROG Strix Z790-E",
+    "max_ram_capacity": "192GB",
+    "ram_type": "DDR5",
+    "price": 599.99,
+    "provider": "Asus"
+  },
+  {
+    "id": 4,
+    "model": "B660 DS3H AX",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR4",
+    "price": 139.99,
+    "provider": "Gigabyte"
+  },
+  {
+    "id": 5,
+    "model": "Pro B760-P",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR5",
+    "price": 129.99,
+    "provider": "MSI"
+  },
+  {
+    "id": 6,
+    "model": "TUF Gaming B650-Plus",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR5",
+    "price": 199.99,
+    "provider": "Asus"
+  },
+  {
+    "id": 7,
+    "model": "Z690 Aorus Master",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR5",
+    "price": 399.99,
+    "provider": "Gigabyte"
+  },
+  {
+    "id": 8,
+    "model": "H610M-K",
+    "max_ram_capacity": "64GB",
+    "ram_type": "DDR4",
+    "price": 89.99,
+    "provider": "Asus"
+  },
+  {
+    "id": 9,
+    "model": "B760 MAG Tomahawk",
+    "max_ram_capacity": "192GB",
+    "ram_type": "DDR5",
+    "price": 199.99,
+    "provider": "MSI"
+  },
+  {
+    "id": 10,
+    "model": "X670E Taichi",
+    "max_ram_capacity": "128GB",
+    "ram_type": "DDR5",
+    "price": 499.99,
+    "provider": "ASRock"
+  }
+]

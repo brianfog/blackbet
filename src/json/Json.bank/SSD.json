@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "model": "Samsung 990 Pro",
+    "capacity": "1TB",
+    "price": 119.99,
+    "provider": "Samsung"
+  },
+  {
+    "id": 2,
+    "model": "WD Black SN850X",
+    "capacity": "2TB",
+    "price": 159.99,
+    "provider": "Western Digital"
+  },
+  {
+    "id": 3,
+    "model": "Crucial P3 Plus",
+    "capacity": "500GB",
+    "price": 39.99,
+    "provider": "Crucial"
+  },
+  {
+    "id": 4,
+    "model": "Kingston KC3000",
+    "capacity": "1TB",
+    "price": 89.99,
+    "provider": "Kingston"
+  },
+  {
+    "id": 5,
+    "model": "Samsung 980",
+    "capacity": "500GB",
+    "price": 54.99,
+    "provider": "Samsung"
+  },
+  {
+    "id": 6,
+    "model": "SK Hynix Platinum P41",
+    "capacity": "2TB",
+    "price": 149.99,
+    "provider": "SK Hynix"
+  },
+  {
+    "id": 7,
+    "model": "Corsair MP600 Pro NH",
+    "capacity": "4TB",
+    "price": 329.99,
+    "provider": "Corsair"
+  },
+  {
+    "id": 8,
+    "model": "TeamGroup MP33",
+    "capacity": "256GB",
+    "price": 24.99,
+    "provider": "TeamGroup"
+  },
+  {
+    "id": 9,
+    "model": "Sabrent Rocket 4 Plus",
+    "capacity": "1TB",
+    "price": 129.99,
+    "provider": "Sabrent"
+  },
+  {
+    "id": 10,
+    "model": "Silicon Power A60",
+    "capacity": "1TB",
+    "price": 59.99,
+    "provider": "Silicon Power"
+  }
+]

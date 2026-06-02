@@ -1,0 +1,56 @@
+.expand-Whole{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 0 15% 0;
+}
+
+.expand_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    aspect-ratio: 2;
+    position: relative;
+}
+
+.exp-slides{
+    height: 99%;
+    flex: 1;
+    margin: 2px;
+    background: gray;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgb(80, 80, 80);
+}
+
+.exp-head{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    transform: rotate(90deg);
+    color: white;
+    top: 24%;
+    left: -50%;
+    font-size: 1vw;
+    flex-shrink: 0;
+    height: 10%;
+    aspect-ratio: 5;
+    font-family: arial;
+}
+
+.exp-slides:hover{
+    flex: 4;
+    transition: 0.4s ease;
+}
+
+.exp-slides:hover .exp-head{
+
+    left: -20%;
+ 
+}

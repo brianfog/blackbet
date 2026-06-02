@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "model": "RM850x",
+    "wattage": "850W",
+    "price": 139.99,
+    "provider": "Corsair"
+  },
+  {
+    "id": 2,
+    "model": "EVGA SuperNOVA 1000 G5",
+    "wattage": "1000W",
+    "price": 179.99,
+    "provider": "EVGA"
+  },
+  {
+    "id": 3,
+    "model": "Seasonic Focus GX-750",
+    "wattage": "750W",
+    "price": 119.99,
+    "provider": "Seasonic"
+  },
+  {
+    "id": 4,
+    "model": "Be Quiet! Pure Power 12 M",
+    "wattage": "550W",
+    "price": 89.90,
+    "provider": "be quiet!"
+  },
+  {
+    "id": 5,
+    "model": "Thermaltake Toughpower GF3",
+    "wattage": "1200W",
+    "price": 259.99,
+    "provider": "Thermaltake"
+  },
+  {
+    "id": 6,
+    "model": "MSI MAG A650BN",
+    "wattage": "650W",
+    "price": 69.99,
+    "provider": "MSI"
+  },
+  {
+    "id": 7,
+    "model": "Corsair SF750",
+    "wattage": "750W",
+    "price": 169.99,
+    "provider": "Corsair"
+  },
+  {
+    "id": 8,
+    "model": "ASUS ROG Thor 1000W",
+    "wattage": "1000W",
+    "price": 289.99,
+    "provider": "ASUS"
+  },
+  {
+    "id": 9,
+    "model": "Cooler Master MWE 550",
+    "wattage": "550W",
+    "price": 59.99,
+    "provider": "Cooler Master"
+  },
+  {
+    "id": 10,
+    "model": "EVGA 500 W1",
+    "wattage": "500W",
+    "price": 44.99,
+    "provider": "EVGA"
+  }
+]
