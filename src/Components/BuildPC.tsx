@@ -52,8 +52,8 @@ export default function BuildyourPc() {
                                 {
                                     list.map((hwl, i) => (<button key={i}>
                                         <h1 style={{fontSize: "1.6vw", position:"absolute", left:"3%", top:"1.5%"}}>{hwl.model}</h1>
-                                        <h2 style={{fontSize: "1vw", position: "absolute", left: "3%", bottom: "2%"}}>{ hwl.type ? hwl.type : null}</h2>
-                                        <h2 style={{fontSize: "1vw", position:"absolute", right: "3%", top:"1%"}}>{ hwl.capacity ? hwl.capacity : null}</h2>
+                                        <h2 style={{fontSize: "1vw", position: "absolute", left: "3%", bottom: "2%"}}>{ (hwl as any).type ? (hwl as any).type : null}</h2>
+                                        <h2 style={{fontSize: "1vw", position:"absolute", right: "3%", top:"1%"}}>{ (hwl as any).capacity ? (hwl as any).capacity : null}</h2>
                                         <h2 style={{fontSize: "1.2vw", position:"absolute", right: "3%", bottom:"2%"}}>{hwl.price}</h2>
                                     </button>))
                                 }

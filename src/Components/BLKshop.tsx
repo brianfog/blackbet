@@ -16,13 +16,13 @@ export default function Blkshopp() {
         "PSU": { "Wattage": ["550 W", "750 W", "850 W", "1000 W", "1200 W"] }
     };
 
-    const Hardware_ref = useRef([]);
+    const Hardware_ref = useRef<any[]>([]);
 
     const [open_index, set_open] = useState();
 
-    const Hardware_switch_Rot = useRef([]);
+    const Hardware_switch_Rot = useRef<any[]>([]);
 
-    const Hardware_Open = (index : number) => {
+    const Hardware_Open = (index) => {
 
         set_open(open_index === index ? null : index);
 
@@ -38,7 +38,7 @@ export default function Blkshopp() {
 
     const [Dir_Right, Set_Dir] = useState(false);
 
-    const priceRef = useRef([]);
+    const priceRef = useRef<any[]>([]);
 
     const [Draging, Set_Drag] = useState(false);
 
