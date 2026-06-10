@@ -15,8 +15,6 @@ export default function BuildyourPc() {
 
     const HW_lists = [cpu,gpu,ram,ssd,motherb,psu];
 
-    const [hello, sethello] = useState();
-
     const [list, set_List] = useState(cpu);
 
     const sayhell = async(index) => {
@@ -30,7 +28,6 @@ export default function BuildyourPc() {
             <div className="PC_Builder">
 
                 <div className="PC_video">
-                    {hello}
                 </div>
                 <div className="Hardware_Section">
                     <div className="Hardware_Sec_Header">
