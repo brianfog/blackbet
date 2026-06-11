@@ -16,11 +16,11 @@ export default function Blkshopp() {
         "PSU": { "Wattage": ["550 W", "750 W", "850 W", "1000 W", "1200 W"] }
     };
 
-    const Hardware_ref = useRef<any[]>([]);
+    const Hardware_ref = useRef<HTMLElement[]>([]);
 
     const [open_index, set_open] = useState();
 
-    const Hardware_switch_Rot = useRef<any[]>([]);
+    const Hardware_switch_Rot = useRef<HTMLElement[]>([]);
 
     const Hardware_Open = (index) => {
 
@@ -38,7 +38,7 @@ export default function Blkshopp() {
 
     const [Dir_Right, Set_Dir] = useState(false);
 
-    const priceRef = useRef<any[]>([]);
+    const priceRef = useRef<HTMLElement[]>([]);
 
     const [Draging, Set_Drag] = useState(false);
 
@@ -104,7 +104,7 @@ export default function Blkshopp() {
             Set_Drag(false);
         }
 
-        if (priceRef.current[0] || priceRef.current[1]) {
+        if (priceRef.current[0] && priceRef.current[1]) {
 
             const minbtn = priceRef.current[0].getBoundingClientRect();
 
@@ -112,7 +112,7 @@ export default function Blkshopp() {
 
             const maxbtn = priceRef.current[1].getBoundingClientRect();
 
-            priceRef.current[1].style.left = `-${minbtn.width / 2}px`;
+            priceRef.current[1].style.left = `-${maxbtn.width / 2}px`;
 
             priceRef.current[0].addEventListener("pointerdown", onPrice);
 
@@ -124,7 +124,9 @@ export default function Blkshopp() {
 
         }
         return () => {
-            if (priceRef.current[0] || priceRef.current[1]) {
+
+            if (priceRef.current[0] &&  priceRef.current[1]) {
+
                 priceRef.current[0].removeEventListener("pointerdown", onPrice);
 
                 priceRef.current[1].addEventListener("pointerdown", onPrice);
@@ -137,7 +139,7 @@ export default function Blkshopp() {
 
 
 
-    }, [Draging, minCost, Dir_Right])
+    }, [Draging, minCost,maxCost, Dir_Right])
 
 
 

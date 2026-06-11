@@ -393,6 +393,10 @@ shopping section
         width: 100%;
     }
 
+    .Price-Range h1{
+        font-size: 2.3vw;
+    }
+
     .Whole-Shop{
         margin: 0;
         margin-top: 40px;
@@ -429,5 +433,23 @@ shopping section
     .max-range-drive{
         font-size: 1.5vw;
     }
+
+}
+
+
+@media screen and (max-width: 476px) {
+    
+    .price-Range h1 {
+        font-size: 6vw;
+    }
+
+    .min-range-drive{
+        font-size: 2vw;
+    }
+
+    .max-range-drive{
+        font-size: 2vw;
+    }
+
 
 }
