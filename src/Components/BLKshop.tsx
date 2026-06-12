@@ -16,11 +16,11 @@ export default function Blkshopp() {
         "PSU": { "Wattage": ["550 W", "750 W", "850 W", "1000 W", "1200 W"] }
     };
 
-    const Hardware_ref = useRef<HTMLElement[]>([]);
+    const Hardware_ref = useRef<HTMLDivElement[]>([]);
 
     const [open_index, set_open] = useState();
 
-    const Hardware_switch_Rot = useRef<HTMLElement[]>([]);
+    const Hardware_switch_Rot = useRef<HTMLParagraphElement[]>([]);
 
     const Hardware_Open = (index) => {
 
@@ -38,7 +38,7 @@ export default function Blkshopp() {
 
     const [Dir_Right, Set_Dir] = useState(false);
 
-    const priceRef = useRef<HTMLElement[]>([]);
+    const priceRef = useRef<HTMLDivElement[]>([]);
 
     const [Draging, Set_Drag] = useState(false);
 
@@ -152,12 +152,12 @@ export default function Blkshopp() {
                     <h1>At Your Price</h1>
                     <div className="Range-inputs">
                         <div className="minimum-bar" ref={minRef}>
-                            <div className="min-range-drive" ref={el => priceRef.current[0] = el} onMouseEnter={() => Set_Dir(false)}>
+                            <div className="min-range-drive" ref={(el : HTMLDivElement) => {if (el) priceRef.current[0] = el}} onMouseEnter={() => Set_Dir(false)}>
                                 {minCost}$
                             </div>
                         </div>
                         <div className="maximum-bar" ref={maxRef}>
-                            <div className="max-range-drive" ref={el => priceRef.current[1] = el} onMouseEnter={() => Set_Dir(true)}>
+                            <div className="max-range-drive" ref={(el : HTMLDivElement) => {if(el) priceRef.current[1] = el}} onMouseEnter={() => Set_Dir(true)}>
                                 {maxCost}$
                             </div>
                         </div>
@@ -166,13 +166,13 @@ export default function Blkshopp() {
 
                 {
                     Object.entries(hardware_choice).map(([key,data], i) => (
-                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? "500px" : "100px" }} ref={elmnt => Hardware_ref.current[i] = elmnt}>
+                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? "500px" : "100px" }} ref={(elmnt:HTMLDivElement) =>{if (elmnt) Hardware_ref.current[i] = elmnt}}>
                             <div className="Hardware-Head">
                                 <h1>
                                     {key}
                                 </h1>
                                 <button onClick={() => Hardware_Open(i)}>
-                                    <p ref={el => Hardware_switch_Rot[i] = el} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
+                                    <p ref={(el: HTMLParagraphElement) => {if(el) Hardware_switch_Rot[i] = el}} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
                                         {">"}
                                     </p>
                                 </button>

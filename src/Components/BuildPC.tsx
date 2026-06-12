@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React,{useState} from "react";
 import "../CSS/Buildpc.css";
 import cpu from "../json/Json.bank/CPU.json";
 import gpu from "../json/Json.bank/GPU.json";
@@ -15,13 +15,15 @@ export default function BuildyourPc() {
 
     const HW_lists = [cpu,gpu,ram,ssd,motherb,psu];
 
-    const [list, set_List] = useState(cpu);
+    const [list, set_List] = useState<object[]>(cpu);
 
-    const sayhell = async(index) => {
+    const sayhell = async(index : number) => {
 
         set_List(HW_lists[index]);
 
     }
+
+    type objtyp = typeof list[0];
 
     return (
         <div className="PC_Lab">
@@ -47,11 +49,13 @@ export default function BuildyourPc() {
 
                             <div className="Hardware_List">
                                 {
-                                    list.map((hwl, i) => (<button key={i}>
-                                        <h1 style={{fontSize: "1.6vw", position:"absolute", left:"3%", top:"1.5%"}}>{hwl.model}</h1>
-                                        <h2 style={{fontSize: "1vw", position: "absolute", left: "3%", bottom: "2%"}}>{ (hwl as object).type ? (hwl as object).type : null}</h2>
-                                        <h2 style={{fontSize: "1vw", position:"absolute", right: "3%", top:"1%"}}>{ (hwl as object).capacity ? (hwl as object).capacity : null}</h2>
-                                        <h2 style={{fontSize: "1.2vw", position:"absolute", right: "3%", bottom:"2%"}}>{hwl.price}</h2>
+                                    list.map((hwl: objtyp, i) => (<button key={i}>
+                                        <h1 style={{fontSize: "1.6vw", position:"absolute", left:"3%", top:"1.5%"}}>{hwl.model ?? null}</h1>
+                                        //@ts-ignore
+                                        <h2 style={{fontSize: "1vw", position: "absolute", left: "3%", bottom: "2%"}}>{hwl.type ?? null}</h2>
+                                        //@ts-ignore
+                                        <h2 style={{fontSize: "1vw", position:"absolute", right: "3%", top:"1%"}}>{hwl.capacity ?? null}</h2>
+                                        <h2 style={{fontSize: "1.2vw", position:"absolute", right: "3%", bottom:"2%"}}>{hwl.price ?? null}</h2>
                                     </button>))
                                 }
                             </div>
