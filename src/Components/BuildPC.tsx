@@ -15,15 +15,42 @@ export default function BuildyourPc() {
 
     const HW_lists = [cpu,gpu,ram,ssd,motherb,psu];
 
+    const [build_search, set_search_build] = useState<string>("");
+
     const [list, set_List] = useState<object[]>(cpu);
+
+    const [anum, setanum] = useState<number>(0);
 
     const sayhell = async(index : number) => {
 
         set_List(HW_lists[index]);
+        setanum(index);
 
     }
 
-    type objtyp = typeof list[0];
+    type majtype = {
+        model : string;
+        price : number;
+        capacity : string;
+        type: string
+    };
+
+
+
+    
+
+    const notempty = (e) => {
+
+        const array = HW_lists[anum];
+
+        if(build_search != ""){
+        set_List(array.filter(item => item.model.toLocaleLowerCase().includes(e.target.value.toLowerCase())));
+        }else{
+        set_List(array);
+        }
+
+    }
+
 
     return (
         <div className="PC_Lab">
@@ -44,18 +71,16 @@ export default function BuildyourPc() {
                         </div>
                         <div className="Hardware_Find">
                             <div className="Hardware_Find_Input">
-                                <input type="text"/>
+                                <input type="text" value={build_search} onChange={(e) =>{ set_search_build(e.target.value.toLowerCase());notempty(e)}}/>
                             </div>
 
                             <div className="Hardware_List">
                                 {
-                                    list.map((hwl: objtyp, i) => (<button key={i}>
-                                        <h1 style={{fontSize: "1.6vw", position:"absolute", left:"3%", top:"1.5%"}}>{hwl.model ?? null}</h1>
-                                        //@ts-ignore
-                                        <h2 style={{fontSize: "1vw", position: "absolute", left: "3%", bottom: "2%"}}>{hwl.type ?? null}</h2>
-                                        //@ts-ignore
-                                        <h2 style={{fontSize: "1vw", position:"absolute", right: "3%", top:"1%"}}>{hwl.capacity ?? null}</h2>
-                                        <h2 style={{fontSize: "1.2vw", position:"absolute", right: "3%", bottom:"2%"}}>{hwl.price ?? null}</h2>
+                                    list.map((hwl: majtype, i) => (<button key={i}>
+                                        <h1 >{hwl.model ?? null}</h1>
+                                        <h2>{hwl.type ?? null}</h2>
+                                        <h2>{hwl.capacity ?? null}</h2>
+                                        <h2 >{hwl.price ?? null}$</h2>
                                     </button>))
                                 }
                             </div>

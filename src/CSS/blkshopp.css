@@ -174,12 +174,13 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 400px;
+    height: max-content;
     background: white;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10%;
 }
 
 
@@ -383,7 +384,7 @@ shopping section
 }
 
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 770px) {
     
     .Shop-Container{
         flex-direction: column;
@@ -414,12 +415,12 @@ shopping section
 
     .Shop-Title h1{
 
-        font-size: 2vw;
+        font-size: 3vw;
 
     }
 
     .Pagination{
-        margin-top: 20px;
+        margin-top: 20%;
     }
 
     .Pagination button{
@@ -427,11 +428,11 @@ shopping section
     }
 
     .min-range-drive{
-        font-size: 1.5vw;
+        font-size: 1.8vw;
     }
 
     .max-range-drive{
-        font-size: 1.5vw;
+        font-size: 1.8vw;
     }
 
 }
@@ -439,16 +440,16 @@ shopping section
 
 @media screen and (max-width: 476px) {
     
-    .price-Range h1 {
+    .Price-Range h1 {
         font-size: 6vw;
     }
 
     .min-range-drive{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .max-range-drive{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
 

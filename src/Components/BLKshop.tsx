@@ -21,10 +21,21 @@ export default function Blkshopp() {
     const [open_index, set_open] = useState();
 
     const Hardware_switch_Rot = useRef<HTMLParagraphElement[]>([]);
+    
+    const [height_state,set_heightState]= useState<number>(null);
 
     const Hardware_Open = (index) => {
 
         set_open(open_index === index ? null : index);
+        
+
+        if(nec_height.current){
+        
+            const heighty = nec_height.current[index].getBoundingClientRect();
+
+            set_heightState(heighty.height);
+            
+        }
 
     };
 
@@ -42,6 +53,7 @@ export default function Blkshopp() {
 
     const [Draging, Set_Drag] = useState(false);
 
+    const nec_height = useRef<HTMLDivElement[]>([]);
 
 
     useEffect(() => {
@@ -129,7 +141,7 @@ export default function Blkshopp() {
 
                 priceRef.current[0].removeEventListener("pointerdown", onPrice);
 
-                priceRef.current[1].addEventListener("pointerdown", onPrice);
+                priceRef.current[1].removeEventListener("pointerdown", onPrice);
 
                 window.removeEventListener("pointermove", movePrice);
 
@@ -152,12 +164,12 @@ export default function Blkshopp() {
                     <h1>At Your Price</h1>
                     <div className="Range-inputs">
                         <div className="minimum-bar" ref={minRef}>
-                            <div className="min-range-drive" ref={(el : HTMLDivElement) => {if (el) priceRef.current[0] = el}} onMouseEnter={() => Set_Dir(false)}>
+                            <div className="min-range-drive" ref={(el : HTMLDivElement) => {if (el) priceRef.current[0] = el}} onMouseEnter={() => Set_Dir(false)} onTouchStart={()=> Set_Dir(false)}>
                                 {minCost}$
                             </div>
                         </div>
                         <div className="maximum-bar" ref={maxRef}>
-                            <div className="max-range-drive" ref={(el : HTMLDivElement) => {if(el) priceRef.current[1] = el}} onMouseEnter={() => Set_Dir(true)}>
+                            <div className="max-range-drive" ref={(el : HTMLDivElement) => {if(el) priceRef.current[1] = el}} onMouseEnter={() => Set_Dir(true)} onTouchStart={() => Set_Dir(true)}>
                                 {maxCost}$
                             </div>
                         </div>
@@ -166,19 +178,19 @@ export default function Blkshopp() {
 
                 {
                     Object.entries(hardware_choice).map(([key,data], i) => (
-                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? "500px" : "100px" }} ref={(elmnt:HTMLDivElement) =>{if (elmnt) Hardware_ref.current[i] = elmnt}}>
+                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? `${height_state + 100}px` : "100px" }} ref={(elmnt:HTMLDivElement) =>{if (elmnt) Hardware_ref.current[i] = elmnt}}>
                             <div className="Hardware-Head">
                                 <h1>
                                     {key}
                                 </h1>
                                 <button onClick={() => Hardware_Open(i)}>
-                                    <p ref={(el: HTMLParagraphElement) => {if(el) Hardware_switch_Rot[i] = el}} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
+                                    <p ref={(el: HTMLParagraphElement) => {if(el) Hardware_switch_Rot.current[i] = el}} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
                                         {">"}
                                     </p>
                                 </button>
                             </div>
 
-                            <div className="Hardware-Assets">
+                            <div className="Hardware-Assets" ref={(el: HTMLDivElement) => {if(el) nec_height.current[i] = el}}>
                                 {Object.entries(data).map(([hf,ndta], i) => (<>
                                     <h1 style={{ fontFamily: "arial", border: "1px solid black", borderStyle: "none none solid none", width: "80%" }} key={i}>{hf}</h1>
                                     <div className="Hardware-checkbox">
