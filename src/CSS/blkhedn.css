@@ -262,7 +262,7 @@
     }
 
     .truck-animation img {
-        display: none;
+        display: flex;
     }
 
     .truck-line h1 {
