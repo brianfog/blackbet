@@ -21,20 +21,20 @@ export default function Blkshopp() {
     const [open_index, set_open] = useState();
 
     const Hardware_switch_Rot = useRef<HTMLParagraphElement[]>([]);
-    
-    const [height_state,set_heightState]= useState<number>(null);
+
+    const [height_state, set_heightState] = useState<number>(null);
 
     const Hardware_Open = (index) => {
 
         set_open(open_index === index ? null : index);
-        
 
-        if(nec_height.current){
-        
+
+        if (nec_height.current) {
+
             const heighty = nec_height.current[index].getBoundingClientRect();
 
             set_heightState(heighty.height);
-            
+
         }
 
     };
@@ -80,9 +80,49 @@ export default function Blkshopp() {
 
             if (!price_parent) return;
 
-
+            
 
             let percentage = Dir_Right ? (price_parent.right - e.clientX) / price_parent.width : (e.clientX - price_parent.left) / price_parent.width;
+
+            percentage = Math.max(0, Math.min(1, percentage));
+
+
+            const min0max = Dir_Right ? max_value : min_value;
+
+            const flip_width = Dir_Right ? min_value - max_value : max_value - min_value;
+
+            const New_cost = Math.round(min0max + flip_width * percentage);
+
+            const clamped_cost = Dir_Right ? Math.max(New_cost, min_value + 100) : Math.min(New_cost, max_value - 100);
+
+            if (Dir_Right) { set_max(clamped_cost) } else { set_min(clamped_cost); }
+
+            if (minRef.current && !Dir_Right) {
+                const New_width = ((clamped_cost - min_value) / (max_value - min_value)) * 100;
+
+                minRef.current.style.width = `${New_width}%`;
+
+            } else if (maxRef.current && Dir_Right) {
+                const New_width = ((max_value - clamped_cost) / (max_value - min_value) * 100);
+
+                maxRef.current.style.width = `${New_width}%`;
+            }
+
+
+
+        }
+
+        const movePricetouch = (e) => {
+
+            if (!Draging) return;
+
+            const price_parent = minRef.current?.parentElement?.getBoundingClientRect();
+
+            if (!price_parent) return;
+
+            
+
+            let percentage = Dir_Right ? (price_parent.right - e.touches.clientX) / price_parent.width : (e.touches[0].clientX - price_parent.left) / price_parent.width;
 
             percentage = Math.max(0, Math.min(1, percentage));
 
@@ -134,10 +174,18 @@ export default function Blkshopp() {
 
             window.addEventListener("pointerup", outPrice);
 
+            priceRef.current[0].addEventListener("touchstart", onPrice);
+
+            priceRef.current[1].addEventListener("touchstart", onPrice);
+
+            window.addEventListener("touchmove", movePricetouch);
+
+            window.addEventListener("touchend", outPrice);
+
         }
         return () => {
 
-            if (priceRef.current[0] &&  priceRef.current[1]) {
+            if (priceRef.current[0] && priceRef.current[1]) {
 
                 priceRef.current[0].removeEventListener("pointerdown", onPrice);
 
@@ -146,12 +194,22 @@ export default function Blkshopp() {
                 window.removeEventListener("pointermove", movePrice);
 
                 window.removeEventListener("pointerup", outPrice);
+
+                priceRef.current[0].removeEventListener("touchstart", onPrice);
+
+                priceRef.current[1].removeEventListener("touchstart", onPrice);
+
+                window.removeEventListener("touchmove", movePricetouch);
+
+                window.removeEventListener("touchend", outPrice);
+
+
             }
         }
 
 
 
-    }, [Draging, minCost,maxCost, Dir_Right])
+    }, [Draging, minCost, maxCost, Dir_Right])
 
 
 
@@ -164,12 +222,12 @@ export default function Blkshopp() {
                     <h1>At Your Price</h1>
                     <div className="Range-inputs">
                         <div className="minimum-bar" ref={minRef}>
-                            <div className="min-range-drive" ref={(el : HTMLDivElement) => {if (el) priceRef.current[0] = el}} onMouseEnter={() => Set_Dir(false)} onTouchStart={()=> Set_Dir(false)}>
+                            <div className="min-range-drive" ref={(el: HTMLDivElement) => { if (el) priceRef.current[0] = el }} onMouseEnter={() => Set_Dir(false)} onTouchStart={() => Set_Dir(false)}>
                                 {minCost}$
                             </div>
                         </div>
                         <div className="maximum-bar" ref={maxRef}>
-                            <div className="max-range-drive" ref={(el : HTMLDivElement) => {if(el) priceRef.current[1] = el}} onMouseEnter={() => Set_Dir(true)} onTouchStart={() => Set_Dir(true)}>
+                            <div className="max-range-drive" ref={(el: HTMLDivElement) => { if (el) priceRef.current[1] = el }} onMouseEnter={() => Set_Dir(true)} onTouchStart={() => Set_Dir(true)}>
                                 {maxCost}$
                             </div>
                         </div>
@@ -177,21 +235,21 @@ export default function Blkshopp() {
                 </div>
 
                 {
-                    Object.entries(hardware_choice).map(([key,data], i) => (
-                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? `${height_state + 100}px` : "100px" }} ref={(elmnt:HTMLDivElement) =>{if (elmnt) Hardware_ref.current[i] = elmnt}}>
+                    Object.entries(hardware_choice).map(([key, data], i) => (
+                        <div key={i} className="Hardware-Choice" style={{ height: open_index === i ? `${height_state + 100}px` : "100px" }} ref={(elmnt: HTMLDivElement) => { if (elmnt) Hardware_ref.current[i] = elmnt }}>
                             <div className="Hardware-Head">
                                 <h1>
                                     {key}
                                 </h1>
                                 <button onClick={() => Hardware_Open(i)}>
-                                    <p ref={(el: HTMLParagraphElement) => {if(el) Hardware_switch_Rot.current[i] = el}} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
+                                    <p ref={(el: HTMLParagraphElement) => { if (el) Hardware_switch_Rot.current[i] = el }} style={{ transform: open_index === i ? `rotate(90deg) scaleY(1.5)` : `rotate(0deg) scaleY(1.5)` }}>
                                         {">"}
                                     </p>
                                 </button>
                             </div>
 
-                            <div className="Hardware-Assets" ref={(el: HTMLDivElement) => {if(el) nec_height.current[i] = el}}>
-                                {Object.entries(data).map(([hf,ndta], i) => (<>
+                            <div className="Hardware-Assets" ref={(el: HTMLDivElement) => { if (el) nec_height.current[i] = el }}>
+                                {Object.entries(data).map(([hf, ndta], i) => (<>
                                     <h1 style={{ fontFamily: "arial", border: "1px solid black", borderStyle: "none none solid none", width: "80%" }} key={i}>{hf}</h1>
                                     <div className="Hardware-checkbox">
                                         {ndta.map((HU, i) => (
