@@ -26,15 +26,17 @@
 }
 
 
-@keyframes glitter{
-    0%{
+@keyframes glitter {
+    0% {
         box-shadow: 1px 1px 10px rgb(122, 122, 122), -1px -1px 10px rgb(122, 122, 122);
     }
-    49%{
+
+    49% {
         box-shadow: 5.5px 5.5px 10px rgb(122, 122, 122), -5.5px -5.5px 10px rgb(122, 122, 122);
     }
-    99%{
-        box-shadow: 1px 1px 10px rgb(122, 122, 122),-1px -1px 10px rgb(122, 122, 122);
+
+    99% {
+        box-shadow: 1px 1px 10px rgb(122, 122, 122), -1px -1px 10px rgb(122, 122, 122);
     }
 
 }
@@ -75,7 +77,7 @@
     font-size: 1.2vw;
 }
 
-.inputs input:focus{
+.inputs input:focus {
     outline: none;
 }
 
@@ -135,9 +137,9 @@
     animation: SHine infinite linear 2s;
 }
 
-.Sign-submit:hover{
+.Sign-submit:hover {
     background: rgb(239, 239, 239);
-    box-shadow: 2px 2px 10px rgb(255, 255, 255),-2px -2px 10px rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgb(255, 255, 255), -2px -2px 10px rgb(255, 255, 255);
     color: black;
     border: none;
     transition: 0.2s ease;
@@ -147,7 +149,7 @@
     transform: scale(0.97);
 }
 
-.sub-header-right{
+.sub-header-right {
     width: 40%;
     height: max-content;
     position: relative;
@@ -158,7 +160,7 @@
     align-items: center;
 }
 
-.welcome-text{
+.welcome-text {
     color: whitesmoke;
     font-size: 8vw;
     border: 1px solid white;
@@ -167,7 +169,7 @@
 }
 
 
-.truck-animation{
+.truck-animation {
     width: 100%;
     aspect-ratio: 7/1;
     display: flex;
@@ -176,7 +178,7 @@
     justify-content: start;
 }
 
-.truck-animation img{
+.truck-animation img {
 
     height: 100%;
     aspect-ratio: 1;
@@ -184,7 +186,7 @@
 
 }
 
-.truck-line{
+.truck-line {
     width: 90%;
     height: 100%;
     display: flex;
@@ -195,8 +197,8 @@
     position: relative;
 }
 
-.truck-line h1{
-    font-size: 2.2vw ;
+.truck-line h1 {
+    font-size: 2.2vw;
     min-width: 500px;
     color: white;
     padding-left: 10%;
@@ -204,16 +206,18 @@
 
 @keyframes truck_anime {
 
-    from{
+    from {
         width: 0%;
-    }to{
+    }
+
+    to {
         width: 100%;
     }
 
 }
 
 @media screen and (max-width: 730px) {
-    .Introduction-section{
+    .Introduction-section {
         flex-direction: column-reverse;
         padding: 30px 0 100px 0;
         justify-content: space-between;
@@ -221,7 +225,7 @@
     }
 
     .Log-In {
-        width:70%;
+        width: 70%;
     }
 
     .Log-In label {
@@ -232,32 +236,40 @@
         font-size: 3.5vw;
     }
 
-    .inputs input::placeholder{
+    .inputs input::placeholder {
         font-size: 3vw;
     }
 
-    .Sign-Submit-Sec p{
+    .Sign-Submit-Sec p {
         font-size: 2.5vw;
     }
 
-    .Sign-submit{
+    .Sign-submit {
         font-size: 3vw;
     }
 
-    .sub-header-right{
+    .sub-header-right {
         width: 70%;
         margin-bottom: 70px;
     }
 
-    .welcome-text{
+    .welcome-text {
         font-size: 13vw;
     }
 
-    .truck-animation{
+    .truck-animation {
         aspect-ratio: 6/1;
     }
 
-    .truck-line h1{
+    .truck-animation img {
+
+        height: 100%;
+        aspect-ratio: 1;
+        margin-bottom: 2%;
+
+    }
+
+    .truck-line h1 {
         font-size: 4vw;
         padding-left: 5%;
     }
