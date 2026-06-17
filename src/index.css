@@ -2,6 +2,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+*{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 body {
   background: rgb(231, 231, 231);
   margin: 0;

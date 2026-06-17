@@ -122,7 +122,7 @@ export default function Blkshopp() {
 
             
 
-            let percentage = Dir_Right ? (price_parent.right - e.touches.clientX) / price_parent.width : (e.touches[0].clientX - price_parent.left) / price_parent.width;
+            let percentage = Dir_Right ? (price_parent.right - e.touches[0].clientX) / price_parent.width : (e.touches[0].clientX - price_parent.left) / price_parent.width;
 
             percentage = Math.max(0, Math.min(1, percentage));
 
