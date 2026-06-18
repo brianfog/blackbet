@@ -179,7 +179,7 @@
     position: relative;
 }
 
-.truck-animation img {
+.truck-img {
 
     height: 100%;
     aspect-ratio: 1;
@@ -264,7 +264,7 @@
         position: relative;
     }
 
-    .truck-animation img {
+    .truck-img {
         display: flex;
         aspect-ratio: 1;
         height: 100%;

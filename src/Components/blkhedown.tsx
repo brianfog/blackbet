@@ -69,7 +69,7 @@ export default function Bheadown() {
                     <div className="truck-line">
                         <h1>To BlackBerry Official Site  </h1>
                     </div>
-                    <img src={truck} />
+                    <img src={truck} className="truck-img"/>
                 </div>
 
             </div>
