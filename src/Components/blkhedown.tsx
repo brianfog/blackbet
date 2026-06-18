@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "../CSS/blkhedn.css";
 import truck from "../Images/icons8-truck-100(1).png";
 
@@ -44,11 +44,11 @@ export default function Bheadown() {
                 <div className="sign-input-box">
 
                     <div className="inputs">
-                        <input type="email" onChange={(e) => { set_emial(e.target.value) }} placeholder="Your Email..." maxLength={25} />
+                        <input type="email" value={email} onChange={(e) => { set_emial(e.target.value) }} placeholder="Your Email..." maxLength={25} />
                     </div>
 
                     <div className="inputs">
-                        <input type={TheType} onChange={(e) => { set_pass(e.target.value) }} placeholder="Your Password..." maxLength={15} />
+                        <input type={TheType} value={pass} onChange={(e) => { set_pass(e.target.value) }} placeholder="Your Password..." maxLength={15} />
                         <button onClick={seepass} ref={see}>x</button>
                     </div>
 
