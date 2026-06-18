@@ -260,10 +260,14 @@
 
     .truck-animation {
         aspect-ratio: 6/1;
+        width: 100%;
+        position: relative;
     }
 
     .truck-animation img {
         display: flex;
+        aspect-ratio: 1;
+        height: 100%;
     }
 
     .truck-line h1 {
