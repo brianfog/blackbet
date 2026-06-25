@@ -22,3 +22,7 @@ body {
   font-family: milk;
   src: url(Fonts/Milker.otf);
 }
+
+.userprf {
+  display: none;
+}

@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import "../CSS/blkhedn.css";
 import truck from "../Images/icons8-truck-100(1).png";
+import { useSelector, useDispatch } from "react-redux";
+import type { treestate } from "../Redux/reduxtree";
+import { increaseuserScore } from "../Redux/counterslice";
 
 export default function Bheadown() {
 
@@ -29,6 +32,11 @@ export default function Bheadown() {
         }
 
     };
+
+
+    const USER_Score = useSelector((state: treestate) => state.counter.score);
+
+    const dispatch = useDispatch();
 
 
 
@@ -72,6 +80,10 @@ export default function Bheadown() {
                     <img src={truck} />
                 </div>
 
+            </div>
+            <div className="userprf">
+                <p>{USER_Score}</p>
+                <button onClick={() => dispatch(increaseuserScore(2))}>increase</button>
             </div>
         </div>
     )

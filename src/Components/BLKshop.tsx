@@ -212,12 +212,12 @@ export default function Blkshopp() {
     }, [Draging, minCost, maxCost, Dir_Right])
 
 
+    
 
 
     return (
         <div className="Shop-Container">
             <div className="Shop-Side-Bar">
-
                 <div className="Price-Range">
                     <h1>At Your Price</h1>
                     <div className="Range-inputs">
