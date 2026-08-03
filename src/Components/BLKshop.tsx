@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import "../CSS/blkshopp.css"
+import "../CSS/blkshopp.css";
+import ShopItem from "../mini Components/BlkShoppItem";
 
 
-export default function Blkshopp() {
+
+const Blkshopp = () => {
 
     const hardware_choice = {
         "CPU": { "Providers": ["Intel", "AMD", "NVidia"] },
@@ -273,18 +275,7 @@ export default function Blkshopp() {
 
                 <div className="Shop_Itslef">
                     {
-                        Array.from({ length: 9 }, (_, i) => (
-                            <div className="Shop-Item" key={i}>
-                                <div className="Shop-Image">
-
-                                </div>
-                                <div className="Shop-Title">
-                                    <h1>
-                                        Shop Title
-                                    </h1>
-                                </div>
-                            </div>
-                        ))
+                        Array.from({ length: 9 }, (_, i) => (<ShopItem key={i}/>))
                     }
                 </div>
 
@@ -302,3 +293,6 @@ export default function Blkshopp() {
     )
 
 }
+
+
+export default Blkshopp;

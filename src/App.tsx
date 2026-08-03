@@ -1,24 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Bfooter from "./Components/BLKfoot";
 import Blkheader from "./Components/blkHead";
-import Bheadown from "./Components/blkhedown";
-import Blan from "./Components/Blkplan";
-import Blkshopp from "./Components/BLKshop";
-import BuildyourPc from "./Components/BuildPC";
-import Exp_Slide from "./Components/ExpandingSlide";
+import BlkHome from "./Pages/BlkHome";
 
 
 
 
 function App() {
-  return(
+  return (
     <>
-      <Blkheader/>
-      <Bheadown/>
-      <Exp_Slide/>
-      <Blkshopp/>
-      <BuildyourPc/>
-      <Blan/>
-      <Bfooter/>
+      <BrowserRouter>
+        <Blkheader />
+        <Routes>
+          <Route path="/" element={<BlkHome/>}/>
+        </Routes>
+        <Bfooter />
+      </BrowserRouter>
     </>
   )
 }

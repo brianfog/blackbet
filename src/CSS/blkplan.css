@@ -1,14 +1,17 @@
 .plan-board{
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     margin: 20% 0 10% 0;
 }
 
 .plan-grid{
     display: grid;
     width: 80%;
+    height: max-content;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2, auto);
     justify-content: center;
@@ -75,6 +78,7 @@
     width: 70%;
     font-size: 1vw;
 }
+
 
 
 @media screen and (max-width: 980px) {

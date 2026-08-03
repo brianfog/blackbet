@@ -1,6 +1,6 @@
 import "../CSS/exp_slide.css";
 
-export default function Exp_Slide() {
+const Exp_Slide = () => {
 
     const Pdct = ["Keyboard", "Headphones", "Flash memory", "HDMI", "Mouse"];
 
@@ -20,3 +20,5 @@ export default function Exp_Slide() {
     )
 
 }
+
+export default Exp_Slide;

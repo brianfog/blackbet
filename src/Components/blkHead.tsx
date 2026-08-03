@@ -1,7 +1,7 @@
 import "../CSS/blkhed.css"
 import blkbry from '../Images/icons8-black-berry-96.png';
 
-export default function Blkheader() {
+const Blkheader = () => {
 
    
     return (
@@ -32,3 +32,5 @@ export default function Blkheader() {
         </>
     )
 }
+
+export default Blkheader;

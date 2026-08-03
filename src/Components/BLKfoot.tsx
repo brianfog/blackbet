@@ -1,6 +1,6 @@
 import '../CSS/blkfooter.css';
 
-export default function Bfooter() {
+const Bfooter = () => {
     return (
         <>
             <footer>
@@ -9,3 +9,5 @@ export default function Bfooter() {
         </>
     )
 }
+
+export default Bfooter;

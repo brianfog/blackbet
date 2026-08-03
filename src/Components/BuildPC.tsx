@@ -7,7 +7,7 @@ import ssd from "../json/Json.bank/SSD.json";
 import motherb from "../json/Json.bank/MotherBoard.json";
 import psu from "../json/Json.bank/PSU.json";
 
-export default function BuildyourPc() {
+const BuildyourPc = () => {
 
 
 
@@ -95,3 +95,5 @@ export default function BuildyourPc() {
     )
 
 }
+
+export default BuildyourPc;

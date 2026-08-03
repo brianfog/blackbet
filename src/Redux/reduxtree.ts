@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./counterslice.ts";
+import counterReducer from "./Data Slices/counterslice.ts";
+import userReducer from "./Data Slices/userslice.ts";
 
 // I'm gonna use it in my black Sign-up Component
 
 export const store = configureStore({
     reducer:{
-        counter: counterReducer
+        counter: counterReducer,
+        user : userReducer
     }
 });
 
-export type treestate = ReturnType<typeof store.getState>;
+export type TreeState = ReturnType<typeof store.getState>;

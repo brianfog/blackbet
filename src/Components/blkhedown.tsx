@@ -2,10 +2,10 @@ import { useRef, useState } from "react";
 import "../CSS/blkhedn.css";
 import truck from "../Images/icons8-truck-100(1).png";
 import { useSelector, useDispatch } from "react-redux";
-import type { treestate } from "../Redux/reduxtree";
-import { increaseuserScore } from "../Redux/counterslice";
+import type { TreeState } from "../Redux/reduxtree";
+import { increaseuserScore } from "../Redux/Data Slices/counterslice";
 
-export default function Bheadown() {
+const Bheadown = () => {
 
 
     const [email, set_emial] = useState("");
@@ -34,7 +34,7 @@ export default function Bheadown() {
     };
 
 
-    const USER_Score = useSelector((state: treestate) => state.counter.score);
+    const USER_Score = useSelector((state: TreeState) => state.counter.score);
 
     const dispatch = useDispatch();
 
@@ -88,3 +88,5 @@ export default function Bheadown() {
         </div>
     )
 }
+
+export default Bheadown;
