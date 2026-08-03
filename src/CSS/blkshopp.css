@@ -447,7 +447,7 @@ shopping section
     }
 
     .Shop-Title button:active {
-        font-size: 1.8;
+        font-size: 1.7vw;
     }
 
     .Pagination{
@@ -470,7 +470,34 @@ shopping section
 
 
 @media screen and (max-width: 476px) {
+
+    .Shop-Container{
+        margin-top: 50%;
+    }
     
+    .Shop_Itslef{
+        grid-template-columns: 1fr;
+    }
+
+    .Pagination{
+        height: unset;
+        aspect-ratio: 3;
+        margin-top: 80%;
+    }
+
+    .Pagination button{
+        width: 8vw;
+        aspect-ratio: 1;
+    }
+
+    .Shop-Title button {
+        font-size: 3vw;
+    }
+
+    .Shop-Title button:active {
+        font-size: 2vw;
+    }
+
     .Price-Range h1 {
         font-size: 6vw;
         margin-top: -0.5%;
@@ -483,6 +510,7 @@ shopping section
     .max-range-drive{
         font-size: 3vw;
     }
+
 
 
 }

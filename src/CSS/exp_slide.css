@@ -54,3 +54,11 @@
     left: -20%;
  
 }
+
+@media screen and (max-width : 476px){
+
+    .expand-Whole{
+        display: none;
+    }
+
+}
